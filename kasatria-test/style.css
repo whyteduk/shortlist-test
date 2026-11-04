@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* For Login Page */
+#login {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6f8;
+  color: #333;
+  z-index: 10;
+}
+
+#login.hidden {
+  display: none;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 48px 56px;
+  text-align: center;
+  width: 90%;
+  max-width: 440px;
+}
+
+.card h1 {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 28px;
+}
+
+#signin {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: #4285f4;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 18px 6px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#signin:hover {
+  background: #3b78db;
+}
+
+#signin .g {
+  background: #fff;
+  border-radius: 3px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+/* For the 3D Scenes */
+#container {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.tile {
+  width: 120px;
+  height: 160px;
+  border: 1px solid;
+  border-radius: 6px;
+  text-align: center;
+  padding: 6px;
+  user-select: none;
+}
+
+.tile .top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.tile img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  margin-top: 6px;
+  border-radius: 3px;
+  background: #222;
+}
+
+.tile .name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tile .interest {
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* Colours for different net worths */
+.tile.red {
+  border-color: #ef3022;
+  background: rgba(239, 48, 34, 0.35);
+  box-shadow: 0 0 12px rgba(239, 48, 34, 0.6);
+}
+
+.tile.orange {
+  border-color: #fdca35;
+  background: rgba(253, 202, 53, 0.3);
+  box-shadow: 0 0 12px rgba(253, 202, 53, 0.6);
+}
+
+.tile.green {
+  border-color: #3a9f48;
+  background: rgba(58, 159, 72, 0.35);
+  box-shadow: 0 0 12px rgba(58, 159, 72, 0.6);
+}
+
+/* For the bottom bar */
+#bar {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 5;
+}
+
+#bar button {
+  background: transparent;
+  color: #7fd8d0;
+  border: 1px solid #3a8f89;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#bar button:hover,
+#bar button.active {
+  background: rgba(127, 216, 208, 0.2);
+}
+
+#legend {
+  display: flex;
+  gap: 10px;
+  margin-left: 24px;
+  font-size: 12px;
+}
+
+#legend span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border-radius: 2px;
+}
+
+.dot-red::before    { background: #ef3022; }
+.dot-orange::before { background: #fdca35; }
+.dot-green::before  { background: #3a9f48; }
